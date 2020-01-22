@@ -1,0 +1,21 @@
+{
+  "development": {
+    "username": "hn1abidx3eqd94fn",
+    "password": "spg7fdehuuo4ianq",
+    "database": "ujxj0e41t8pq3g0e",
+    "host": "nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "password",
+    "database": "goodGames_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}

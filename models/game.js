@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
-      allowNull: false,
+      allowNull: false
     },
     game_name: {
       type: DataTypes.STRING(100),
@@ -30,18 +30,3 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Game;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -18,15 +18,16 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       allowNull: false
     },
-    wishlist: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    }, 
     review: {
       type: DataTypes.TEXT,
       allowNull: false
     }
 
   });
+  Game.associate = function(models) {
+    Game.hasMany(models.User, {
+      onDelete: "cascade"
+    });
+  };
   return Game;
 };

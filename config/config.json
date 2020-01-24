@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "hn1abidx3eqd94fn",
-    "password": "spg7fdehuuo4ianq",
-    "database": "ujxj0e41t8pq3g0e",
-    "host": "nba02whlntki5w2p.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "password",
+    "database": "gamesdb",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {

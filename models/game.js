@@ -21,11 +21,18 @@ module.exports = function(sequelize, DataTypes) {
     review: {
       type: DataTypes.TEXT,
       allowNull: false
+    },
+    game_genre: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    img_src: {
+      type: DataTypes.TEXT,
+      allowNull: false
     }
-
   });
   Game.associate = function(models) {
-    Game.hasMany(models.User, {
+    Game.hasMany(models.UserList, {
       onDelete: "cascade"
     });
   };

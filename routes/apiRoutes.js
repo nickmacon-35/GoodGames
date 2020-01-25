@@ -27,8 +27,9 @@ module.exports = function (app) {
         game_name: req.body.game_name,
         game_type: req.body.game_type,
         played: req.body.played,
-        wishlist: req.body.wishlist,
-        review: req.body.review
+        game_genre: req.body.wishlist,
+        review: req.body.review,
+        img_src: req.body.img_src
       },
       {
         where: {

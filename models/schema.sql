@@ -1,3 +1,5 @@
 -- Drops the todolist if it exists currently --
 -- Creates the "todolist" database --
-CREATE DATABASE dbgame;
+DROP DATABASE IF EXISTS gamesdb;
+CREATE DATABASE gamesdb;
+

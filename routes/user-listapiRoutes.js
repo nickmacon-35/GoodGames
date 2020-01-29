@@ -26,7 +26,7 @@ module.exports = function (app) {
     });
 
 
-    app.delete("/api/users/:id", function (req, res) {
+    app.delete("/api/userlists/:id", function (req, res) {
         db.UserList.destroy({
             where: {
                 id: req.params.id
@@ -35,12 +35,12 @@ module.exports = function (app) {
             res.json(dbUserList);
         });
     });
-    app.put("/api/users", function (req, res) {
+    app.put("/api/userlists/:id", function (req, res) {
         db.UserList.update(
             req.body,
             {
                 where: {
-                    id: req.body.id
+                    id: req.params.id
                 }
             }).then(function (dbUserList) {
                 res.json(dbUserList);

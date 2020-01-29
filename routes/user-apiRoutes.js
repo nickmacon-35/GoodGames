@@ -3,6 +3,8 @@ var db = require("../models");
 module.exports = function (app) {
     app.get("/api/users", function (req, res) {
         db.User.findAll({}).then(function (dbUser) {
+            console.log(dbUser);
+            
             res.json(dbUser);
         });
     });
@@ -35,12 +37,12 @@ module.exports = function (app) {
             res.json(dbUser);
         });
     });
-    app.put("/api/users", function (req, res) {
+    app.put("/api/users/:id", function (req, res) {
         db.User.update(
             req.body,
             {
                 where: {
-                    id: req.body.id
+                    id: req.params.id
                 }
             }).then(function (dbUser) {
                 res.json(dbUser);

@@ -15,10 +15,10 @@ module.exports = function (sequelize, Datatypes) {
             allowNull: false
         }
     });
-    // User.associate = function (models) {
-    //     User.belongsTo(models.UserList, {
-    //         foreignKey: "user_name"
-    //     });
-    // };
+    User.associate = function (models) {
+        User.belongsTo(models.UserList, {
+            foreignKey: "user_name"
+        });
+    };
     return User;
 };

@@ -15,10 +15,10 @@ module.exports = function(sequelize, Datatypes) {
       allowNull: false
         }
     });
-    // UserList.associate = function(models){
-    //     UserList.belongsTo(models.Game, {
-    //         foreinKey: "game_name"
-    //     });
-    // };
+    UserList.associate = function(models){
+        UserList.belongsTo(models.Game, {
+            foreinKey: "game_name"
+        });
+    };
     return UserList;
 };

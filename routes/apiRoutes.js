@@ -16,25 +16,28 @@ module.exports = function (app) {
   });
 
   // Delete an example by id
-  app.delete("/api/games/:id", function(req, res) {
-    db.Game.destroy({ where: { id: req.params.id } }).then(function(dbgame) {
+  app.delete("/api/games/:id", function (req, res) {
+    db.Game.destroy({ where: { id: req.params.id } }).then(function (dbgame) {
       res.json(dbgame);
     });
   });
-  app.put("/api/games/:id", function(req, res) {
+  app.put("/api/games/:id", function (req, res) {
     db.Game.update(
       {
         game_name: req.body.game_name,
-        game_type: req.body.game_type
+        game_type: req.body.game_type,
+        played: req.body.played,
+        game_genre: req.body.wishlist,
+        review: req.body.review,
+        img_src: req.body.img_src
       },
-      { 
-        where:{
-         id: req.params.id
+      {
+        where: {
+          id: req.params.id
         }
-         
-    }).then(function(dbgame) {
-      res.json(dbgame);
-    });
+
+      }).then(function (dbgame) {
+        res.json(dbgame);
+      });
   });
 };
-{}

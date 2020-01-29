@@ -17,16 +17,11 @@ module.exports = function(sequelize, DataTypes) {
     played: {
       type: DataTypes.BOOLEAN,
       allowNull: false
-    },
-    wishlist: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    }, 
-    review: {
-      type: DataTypes.TEXT,
-      allowNull: false
     }
-
   });
+
+  Game.associate = function(models){
+   // Game.hasMany(models.List);
+  };
   return Game;
 };

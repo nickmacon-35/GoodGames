@@ -11,7 +11,28 @@ module.exports = function(app) {
     });
   });
 
-  // Load game page and pass in an game by id
+  // index route loads view.html
+  app.get("/news", function(req, res) {
+    res.render("news");
+  });
+  app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
+
+  app.get("/gamesplayed", function(req, res) {
+    res.render("gamesplayed");
+  });
+  app.get("/add", function(req, res) {
+    res.render("add");
+  });
+  app.get("/previews", function(req, res) {
+    res.render("previews");
+  });
+
+
+
+
+   // Load game page and pass in an game by id
   app.get("/games/:id", function(req, res) {
     db.Game.findOne({ where: { id: req.params.id } }).then(function(dbGames) {
       res.render("games", {

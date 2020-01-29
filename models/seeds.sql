@@ -8,3 +8,4 @@ VALUES ("myname", "password");
 
 INSERT INTO userlists (user_name, played)
 VALUES ("myname", true);
+

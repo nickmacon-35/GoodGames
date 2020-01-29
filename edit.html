@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Games Reviewed</title>
@@ -18,7 +17,7 @@
       background-size: cover;
     }
 
-    b, h2, nav {font-family: 'Press Start 2P', cursive;}
+    b, h2, nav, button {font-family: 'Press Start 2P', cursive;}
 </style>
     
 <body>
@@ -50,7 +49,6 @@
     
     <br><br><br><br>
 
-<!-- body is located here along with the subheader -->
 <div class="container p-3 mb-2 bg-light text-dark">
     <div class="row">
         <div class="col-md-12">
@@ -89,12 +87,14 @@
                 </textarea><br><br>
             </div>
             </form>
-        <!-- deploy submit code to my email nickmacon@gmail.com -->
         </div>
         <div class="col-md-4">
             <img src="http://www.9minecraft.net/wp-content/uploads/2018/07/Fix-It-Map-Thumbnail.jpg" alt="oneup" class="img-thumbnail" style="width:100%">
             <br><br>
-            <a href="mailto:nickmacon@gmail.com" class="p-2 text-center bg-dark text-white"><b>Edit</b></a> 
+<!-- These buttons need to submit the updated information above from the forms into the database. Please adjust hrefs accordingly-->
+            <button id="submit2" class="btn btn-primary float-left">Anticipation Start!</button>
+            <br><br> 
+            <button id="submit3" class="btn btn-primary float-left">Game Over!</button>
         </div>
     </div>
 </div>
